@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1.1</title>
+</head>
+
+<body>
+    <form action="#">
+        <label for="email">Email: </label> <br>
+        <input type="email" id="email" />
+
+        <br>
+
+        <label for="password">Password: </label> <br>
+        <input type="password" id="password" />
+
+        <br>
+
+        <input type="submit" name="submit" value="Submit" onclick="validateForm()" />
+
+        <br>
+
+        <p id="error-msg">a</p>
+    </form>
+
+    <script>
+        function validateForm() {
+            const msg = ""
+            const password = document.getElementById("password").value;
+
+            if (password.length < 6) {
+                alert("a")
+
+                return false
+
+            }
+
+            document.getElementById("error-msg").innerHTML = msg;
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
